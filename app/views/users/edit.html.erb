@@ -1,0 +1,21 @@
+<div class="container">
+
+<h1>Edit Profile</h1>
+<hr>
+
+<%= form_for @user do |f| %>
+    <%= f.text_field :username, placeholder: "Edit your Username", autofocus: true, class: 'form-control' %>
+		<br>
+		<%= f.email_field :email, placeholder: "Edit your email address", class: 'form-control' %>
+		<br>
+		<%= f.text_field :phone, placeholder: "Edit your phone number", class: 'form-control' %>
+		<br>
+		<%= f.text_field :city, placeholder: "Edit your city", class: 'form-control' %>
+		<br>
+		<%= f.text_field :meeting_place, placeholder: "Change your Meeting Place", class: 'form-control' %>
+		<br>
+	  <%= f.password_field :password, placeholder: "Change your Password", class: 'form-control' %>
+	  <br>
+    <%= f.submit "Update Profile", class: 'btn btn-primary', id: "signUpButton" %>
+<% end %>
+</div>
