@@ -1,0 +1,19 @@
+<div class="container">
+	<h1 class="text-center"> Sign up for Aftershock </h1>
+	<hr>
+	<%= form_for @user do |f| %>
+		<%= f.text_field :username, placeholder: "Create a Username", autofocus: true, class: 'form-control' %>
+		<br>
+		<%= f.email_field :email, placeholder: "Enter your email address", class: 'form-control' %>
+		<br>
+		<%= f.text_field :phone, placeholder: "Emter your phone number", class: 'form-control' %>
+		<br>
+		<%= f.text_field :city, placeholder: "Enter your city", class: 'form-control' %>
+		<br>
+		<%= f.text_field :meeting_place, placeholder: "Create a Meeting Place", class: 'form-control' %>
+		<br>
+	  <%= f.password_field :password, placeholder: "Password", class: 'form-control' %>
+	  <br>
+	  <%= f.submit "Sign Up", class: 'btn btn-primary center-block' %>
+	<% end %>
+</div>
