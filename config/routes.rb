@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'prequake/new'
+
+  get 'prequake/create'
+
+  get 'prequake/show'
+
+  get 'prequake/edit'
+
+  get 'prequake/update'
+
+  get 'prequake/destroy'
+
   get 'sessions/new'
 
   get 'sessions/create'
@@ -30,5 +42,12 @@ Rails.application.routes.draw do
   resources :sessions, only: [:create]
   root 'site#index'
 
-  resources :users
+  get '/prequakelist', to: "prequake#index"
+
+  resources :prequake
+
+  get '/postquakelist', to: "postquake#index"
+  resources :postquake
+
+  
 end
