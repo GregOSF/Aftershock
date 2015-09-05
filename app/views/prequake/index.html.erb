@@ -1,0 +1,18 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3 text-center">
+		
+			<h2> Be Prepared When An Earthquake Hits </h2>
+			<hr>
+			<% @prequake_todos.each do |todo| %>
+        <p>
+          <%= todo.desc %>
+          
+        </p>
+        <p><%= todo.event %></p>
+        <hr>
+      <% end %>
+
+		</div>
+	</div>
+</div>
