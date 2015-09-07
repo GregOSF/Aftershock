@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get 'postquake/new'
 
-  get 'postquake/create'
+  post 'postquake/create'
 
   get 'postquake/show'
 
@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   get 'prequake/new'
 
-  get 'prequake/create'
+  post 'prequake/create'
 
   get 'prequake/show'
 
@@ -59,7 +59,9 @@ Rails.application.routes.draw do
   root 'site#index'
 
   get '/prequakelist', to: "prequake#index"
-
+  get "/prequake/edit", to: "prequake#edit"
+  post "/prequake/edit", to: "prequake#update"
+  put '/prequake/edit', to: "prequake#update"
   resources :prequake
 
   get '/postquakelist', to: "postquake#index"
