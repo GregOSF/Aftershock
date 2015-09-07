@@ -1,21 +1,23 @@
-<div class="jumbotron">
-  <div class="container">
-    <h1 class="text-center animated infinite shake"> AFTERSHOCK </h1>
-  </div>
-</div>
-<div class="container">
-	<div class="row">
-		<div class="col-md-6 col-md-offset-3 text-center">
-			<hr>
-			<h3> When The Earth is Pissed, What Will You Do? </h3>
-			<hr>
-			<%= link_to "Pre-Quake Checklist", prequake_index_path, class: "btn btn-primary" %>
-			<hr>
-			<%= link_to "Post-Quake Checklist", prequake_index_path, class: "btn btn-danger" %>
-			<hr>
-			<%= link_to "Get Help", prequake_index_path, class: "btn btn-success" %>
+<div id="siteBody">
+	<div class="jumbotron" id="jumbo">
+	  <div class="container">
+	    <h1 class="text-center" id="mainTitle"> AFTERSHOCK </h1>
+	  </div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 text-center">
+				<hr>
+				<h3> When The Earth is Pissed, What Will You Do? </h3>
+				<hr>
+				<%= link_to "Pre-Quake Checklist", prequake_index_path, class: "btn btn-primary" %>
+				<hr>
+				<%= link_to "Post-Quake Checklist", postquake_index_path, class: "btn btn-danger" %>
+				<hr>
+				<%= link_to "Get Help", maps_path, class: "btn btn-success" %>
+			</div>
 		</div>
+		<!-- <iframe width='100%' height='500px' frameBorder='0' src='https://a.tiles.mapbox.com/v4/gregosf.53fffc0c/attribution,zoompan,zoomwheel,geocoder,share.html?access_token=pk.eyJ1IjoiZ3JlZ29zZiIsImEiOiIxMDRkNWRjNzQ0ODkzNzE2ZTE2YzQ3OGIxMzFjNzZmMCJ9.OA1rNWlN2qWZT03zyD0zGQ'></iframe> -->
 	</div>
 </div>
-
 
