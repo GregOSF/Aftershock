@@ -1,8 +1,14 @@
 class PrequakeController < ApplicationController
+  before_filter :authorize, except: [:index, :show]
 
   def index
     @prequakeseed_todos = Preseed.where("event = 'Prequake'")
-    render :index    
+    if current_user
+      @todos = current_user.todos.where("event = 'Prequake'")
+      render :index    
+    else
+      render :index
+    end
   end
 
   def new
@@ -11,9 +17,19 @@ class PrequakeController < ApplicationController
   end
 
   
+  # def create
+  #   if current_user
+  #     @prequake_todo = Todo.create(prequake_params)
+  #     redirect_to prequakelist_path
+  #   else
+  #     redirect_to login_path
+  #   end
+  # end
+
   def create
     if current_user
-      @prequake_todo = Todo.create(prequake_params)
+      prequake_todo = current_user.todos.new(prequake_params)
+      prequake_todo.save
       redirect_to prequakelist_path
     else
       redirect_to login_path
