@@ -1,0 +1,2 @@
+module PostquakeHelper
+end
