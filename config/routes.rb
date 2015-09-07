@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'postquake/index'
+
+  get 'postquake/new'
+
+  get 'postquake/create'
+
+  get 'postquake/show'
+
+  get 'postquake/edit'
+
+  get 'postquake/update'
+
+  get 'postquake/destroy'
+
   get 'prequake/new'
 
   get 'prequake/create'
@@ -25,6 +39,8 @@ Rails.application.routes.draw do
 
   get 'site/index'
 
+  post 'prequake/new'
+
   get "/signup", to: "users#new"
   get "/profile", to: "users#show"
   get '/users/edit', to: "users#edit"
@@ -48,6 +64,8 @@ Rails.application.routes.draw do
 
   get '/postquakelist', to: "postquake#index"
   resources :postquake
+  
+  resources :maps
 
   
 end
