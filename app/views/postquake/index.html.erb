@@ -11,7 +11,18 @@
         
         <hr>
       <% end %>
-
+			
+			<% if current_user %> 
+				<% @todos.each do |todos| %>
+					<p>
+						<%= todos.desc %>
+					</p>
+				
+				<% end %>			
+			<% else %> 
+				<%= link_to "Login to Customize Your Post-Quake List", 'login' , class: 'btn btn-primary' %>
+				<%= link_to "Signup to Aftershock to Customize Your Post-Quake List", 'signup', class: 'btn btn-primary' %>
+			<% end %>	
 		</div>
 	</div>
 </div>
