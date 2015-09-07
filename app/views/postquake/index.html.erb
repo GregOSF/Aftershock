@@ -1,0 +1,17 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3 text-center">
+		
+			<h2> An Earthquake Just Hit, Now What? </h2>
+			<hr>
+			<% @postquakeseed_todos.each do |postquakeseedtodo| %>
+        <p>
+          <%= postquakeseedtodo.desc %>
+        </p>
+        
+        <hr>
+      <% end %>
+
+		</div>
+	</div>
+</div>
