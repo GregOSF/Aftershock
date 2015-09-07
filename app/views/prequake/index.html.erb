@@ -4,12 +4,11 @@
 		
 			<h2> Be Prepared When An Earthquake Hits </h2>
 			<hr>
-			<% @prequake_todos.each do |todo| %>
+			<% @prequakeseed_todos.each do |prequakeseedtodo| %>
         <p>
-          <%= todo.desc %>
-          
+          <%= prequakeseedtodo.desc %>
         </p>
-        <p><%= todo.event %></p>
+        
         <hr>
       <% end %>
 
