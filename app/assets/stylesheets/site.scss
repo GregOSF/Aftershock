@@ -1,3 +1,20 @@
 // Place all the styles related to the site controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// body {
+// 	background: url('http://earthobservatory.nasa.gov/Features/BlueMarble/Images/gebco_bathy.5400x2700.jpg');
+// 	background-size: cover;
+// 	// padding-top: 50px;
+// 	background-repeat: repeat-x;
+// 	background-attachment: fixed;	
+// 	color: blue
+// }
+
+#jumbo {
+background-color: rgba(255,255,255,0.5)
+}
+
+#mainTitle {
+	font-size: 75px;
+	letter-spacing: 10px;
+}
