@@ -18,3 +18,17 @@ body {
 	background: url('http://www.hdwallpapersos.com/wp-content/uploads/2014/08/31640.jpg');
 	font-family: 'Roboto Condensed', sans-serif;
 }
+
+
+
+
+.quakeListContainer {
+	background-color: rgba(255,255,255,0.8);
+	font-size: 16px;
+	padding: 5px;
+}
+
+.quakeListTitleCon {
+	/*font-weight: bold;*/
+	font-size: 35px;
+}
