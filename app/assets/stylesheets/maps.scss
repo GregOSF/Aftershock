@@ -1,3 +1,34 @@
 // Place all the styles related to the maps controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.ui-button {
+  background:#3887BE;
+  color:#FFF;
+  display:block;
+  position:absolute;
+  top:50%;left:50%;
+  width:160px;
+  margin:-20px 0 0 -80px;
+  z-index:100;
+  text-align:center;
+  padding:10px;
+  border:1px solid rgba(0,0,0,0.4);
+  border-radius:3px;
+}
+
+.ui-button:hover {
+    background:#3074a4;
+    color:#fff;
+}
+
+body {
+	margin:0;
+	padding:0;
+}
+
+#map {
+	position:fixed;
+	top:0;
+	bottom:0;
+	width:100%;
+}
