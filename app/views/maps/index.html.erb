@@ -1,3 +1,67 @@
 
+  <div id='map'>
+    
+  </div>
 
-<iframe width='100%' height='500px' frameBorder='0' src='https://a.tiles.mapbox.com/v4/gregosf.53fffc0c/attribution,zoompan,zoomwheel,geocoder,share.html?access_token=pk.eyJ1IjoiZ3JlZ29zZiIsImEiOiIxMDRkNWRjNzQ0ODkzNzE2ZTE2YzQ3OGIxMzFjNzZmMCJ9.OA1rNWlN2qWZT03zyD0zGQ'></iframe>
+<a href='#' id='geolocate' class='ui-button'>Find me</a></div>
+<script>
+
+L.mapbox.accessToken = 'pk.eyJ1IjoiZ3JlZ29zZiIsImEiOiIxMDRkNWRjNzQ0ODkzNzE2ZTE2YzQ3OGIxMzFjNzZmMCJ9.OA1rNWlN2qWZT03zyD0zGQ';
+var geocoder = L.mapbox.geocoder('mapbox.places'),
+    map = L.mapbox.map('map', 'examples.map-h67hf2ic');
+
+geocoder.query('San Francisco, CA', showMap);
+
+function showMap(err, data) {
+    // The geocoder can return an area, like a city, or a
+    // point, like an address. Here we handle both cases,
+    // by fitting the map bounds to an area or zooming to a point.
+    if (data.lbounds) {
+        map.fitBounds(data.lbounds);
+    } else if (data.latlng) {
+        map.setView([data.latlng[0], data.latlng[1]], 13);
+    }
+}
+
+var geolocate, myLayer;
+
+// L.mapbox.accessToken = 'pk.eyJ1IjoiZ3JlZ29zZiIsImEiOiIxMDRkNWRjNzQ0ODkzNzE2ZTE2YzQ3OGIxMzFjNzZmMCJ9.OA1rNWlN2qWZT03zyD0zGQ';
+
+geolocate = document.getElementById('geolocate');
+
+// map = L.mapbox.map('map', 'mapbox.streets');
+
+myLayer = L.mapbox.featureLayer().addTo(map);
+
+if (!navigator.geolocation) {
+  geolocate.innerHTML = 'Geolocation is not available';
+} else {
+  geolocate.onclick = function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    map.locate();
+  };
+}
+
+map.on('locationfound', function(e) {
+  map.fitBounds(e.bounds);
+  myLayer.setGeoJSON({
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [e.latlng.lng, e.latlng.lat]
+    },
+    properties: {
+      'title': 'Here I am!',
+      'marker-color': '#ff8888',
+      'marker-symbol': 'star'
+    }
+  });
+  geolocate.parentNode.removeChild(geolocate);
+});
+
+map.on('locationerror', function() {
+  geolocate.innerHTML = 'Position could not be found';
+});
+
+</script>
