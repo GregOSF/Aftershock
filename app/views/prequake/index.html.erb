@@ -1,8 +1,10 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3 text-center">
-		
-			<h2> Be Prepared When An Earthquake Hits </h2>
+			<div class="quakeListContainer">
+			<h2 class="quakeListTitleCon"> Be Prepared When An Earthquake Hits </h2>
+			
+			
 			<hr>
 			<% @prequakeseed_todos.each do |prequakeseedtodo| %>
         <p>
@@ -19,6 +21,7 @@
 					</p>
 				
 				<% end %>			
+			</div>
 			<% else %> 
 				<%= link_to "Login to Customize Your Pre-Quake List", 'login' , class: 'btn btn-primary' %>
 				<%= link_to "Signup to Aftershock to Customize Your Pre-Quake List", 'signup', class: 'btn btn-primary' %>
