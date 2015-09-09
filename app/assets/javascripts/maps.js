@@ -63,8 +63,8 @@ map.on('locationfound', function(e) {
   // Create a Foursquare developer account: https://developer.foursquare.com/
   // NOTE: CHANGE THESE VALUES TO YOUR OWN:
   // Otherwise they can be cycled or deactivated with zero notice.
-  var CLIENT_ID = '';
-  var CLIENT_SECRET = '';
+  var CLIENT_ID = 'NEM4CDKQREBCMI1IQM1GQJI0Q2SEEDPWUVSZPRM4PDYNB0FJ';
+  var CLIENT_SECRET = '3UBMFHJOGTRC3LNDRIHOU5ZMJKK0YLVRNLYTIBIVTTI4MCT0';
 
   // FOURSQUARE_ID: 
   // FOURSQUARE_SECRET: 
