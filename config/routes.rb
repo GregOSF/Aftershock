@@ -42,6 +42,7 @@ Rails.application.routes.draw do
   post 'prequake/new'
 
   get "/signup", to: "users#new"
+  post "/signup", to: "users#create"
   get "/profile", to: "users#show"
   get '/users/edit', to: "users#edit"
   post '/users/edit', to: 'users#update'
