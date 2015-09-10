@@ -18,7 +18,8 @@
 						<%= todos.desc %>
 					</p>
 				
-				<% end %>			
+				<% end %>	
+				<%= link_to "Create Your Own Post-Quake Item", 'new_postquake_path' , class: 'btn btn-primary' %>		
 			<% else %> 
 				<%= link_to "Login to Customize Your Post-Quake List", 'login' , class: 'btn btn-primary' %>
 				<%= link_to "Signup to Aftershock to Customize Your Post-Quake List", 'signup', class: 'btn btn-primary' %>
