@@ -48,7 +48,7 @@
            <% if current_user %> 
            
            <li><%= current_user.username %></li> 
-           <li><a href="/sendloc"><button id="matches-near-btn" class="col-xs-6">Nearby Matches</button></a></li>
+           <li><a href="/sendloc"><button id="matches-near-btn" class="btn btn-danger">ALERT EMERGENCY CONTACT</button></a></li>
            <li><%= link_to "Log out", logout_path, method: "delete" %></li> 
            
            <% else %> 
@@ -114,6 +114,10 @@
             <%= f.text_field :city, placeholder: "Enter your city", class: 'form-control' %>
             <br>
             <%= f.text_field :meeting_place, placeholder: "Create a Meeting Place", class: 'form-control' %>
+            <br>
+            <%= f.text_field :contact_name, placeholder: "Enter your Emergency Contact", class: 'form-control' %>
+            <br>
+            <%= f.text_field :contact_num, placeholder: "Enter your Emergency Contact's Phone Number", class: 'form-control' %>
             <br>
             <%= f.password_field :password, placeholder: "Password", class: 'form-control' %>
             <br>
