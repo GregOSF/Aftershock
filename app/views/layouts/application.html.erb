@@ -48,7 +48,7 @@
            <% if current_user %> 
            
            <li><%= current_user.username %></li> 
-           <li><%= link_to "Let Contact Know", logout_path, method: "delete" %></li> 
+           <li><a href="/sendloc"><button id="matches-near-btn" class="col-xs-6">Nearby Matches</button></a></li>
            <li><%= link_to "Log out", logout_path, method: "delete" %></li> 
            
            <% else %> 
