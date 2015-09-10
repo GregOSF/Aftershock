@@ -71,6 +71,7 @@ Rails.application.routes.draw do
   resources :maps
   post 'twilio/voice' => 'twilio#voice'
   post 'notifications/notify' => 'notifications#notify'
+  get '/sendloc', to: "sendloc#connection"
 
   
 end
