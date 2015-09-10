@@ -69,6 +69,8 @@ Rails.application.routes.draw do
   resources :postquake
   
   resources :maps
+  post 'twilio/voice' => 'twilio#voice'
+  post 'notifications/notify' => 'notifications#notify'
 
   
 end
